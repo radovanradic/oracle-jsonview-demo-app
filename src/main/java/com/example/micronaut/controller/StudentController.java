@@ -64,6 +64,16 @@ public class StudentController {
         return studentViewRepository.findById(id);
     }
 
+    @Put("/{id}/student/{student}")
+    public Optional<StudentView> updateStudent(Long id, @NonNull String student) {
+        Optional<StudentView> optionalStudentView = studentViewRepository.findById(id);
+        if (!optionalStudentView.isPresent()) {
+            return Optional.empty();
+        }
+        studentViewRepository.updateStudentByStudentId(id, student);
+        return studentViewRepository.findById(id);
+    }
+
     @Post("/")
     public Optional<StudentView> create(@NonNull @Body CreateStudentViewDto createDto) {
         StudentView studentView = new StudentView();

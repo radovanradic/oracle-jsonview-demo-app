@@ -31,6 +31,10 @@ Find max average grade:
 ```
 curl http://localhost:8080/students/max_average_grade
 ```
+Update student name:
+```
+curl -X PUT http://localhost:8080/students/1/student/NewName
+```
 In order to delete student by id
 ```
 curl -X DELETE http://localhost:8080/students/1
