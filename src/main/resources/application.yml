@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: OracleJsonDemo
+datasources:
+  default:
+    schema-generate: none
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: ${jdbc-username}
+    password: ${jdbc-password}
+    url: ${jdbc-url}
+    packages: org.com.example.entity
+    dialect: oracle
+flyway:
+  datasources:
+    default:
+      enabled: true
+      baseline-version: 0
+      baseline-on-migrate: true
