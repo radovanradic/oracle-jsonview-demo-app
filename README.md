@@ -11,8 +11,7 @@ And to list all students, use this:
 ```
 curl http://localhost:8080/students
 ```
-Other supported methods are:
-Find student by id:
+To find student by id:
 ```
 curl http://localhost:8080/students/1
 ```
@@ -22,7 +21,7 @@ curl http://localhost:8080/students/student/Peter
 ```
 Create new student with classes
 ```
-curl -d '{"student":"Peter", "averageGrade":9.8, "classes": ["Math"]}' -H "Content-Type: application/json" -X POST http://localhost:8080/students
+curl -d '{"student":"Peter", "averageGrade":9.8, "classes": ["Math", "English"]}' -H "Content-Type: application/json" -X POST http://localhost:8080/students
 ```
 To update student average grade
 ```
